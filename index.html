@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Infinity | Solar Exploration</title>
+    <style>
+        :root {
+            --space-black: #050505;
+            --infinity-blue: #00d4ff;
+            --star-white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--space-black);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* --- Header & Running Logo --- */
+        header {
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo-container {
+            font-size: 50px;
+            color: var(--infinity-blue);
+            animation: moveInfinity 6s linear infinite;
+            position: relative;
+        }
+
+        @keyframes moveInfinity {
+            0% { transform: translateX(-100vw) rotate(0deg); }
+            50% { transform: translateX(0vw) rotate(180deg); }
+            100% { transform: translateX(100vw) rotate(360deg); }
+        }
+
+        /* --- Solar System Section --- */
+        .solar-system {
+            position: relative;
+            height: 70vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #050505 100%);
+        }
+
+        .sun {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #fff700, #ff8c00);
+            border-radius: 50%;
+            box-shadow: 0 0 50px #ff8c00;
+            z-index: 10;
+        }
+
+        .orbit {
+            position: absolute;
+            border: 1px border-style: solid;
+            border-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: rotate 10s linear infinite;
+        }
+
+        /* Planet Definitions */
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Earth Example */
+        .earth-orbit { width: 300px; height: 300px; animation-duration: 12s; }
+        .earth { width: 25px; height: 25px; background: #2271b3; box-shadow: inset -5px -5px 5px rgba(0,0,0,0.5); }
+
+        /* Mars Example */
+        .mars-orbit { width: 450px; height: 450px; animation-duration: 20s; }
+        .mars { width: 20px; height: 20px; background: #e27b58; }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .content {
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 { font-size: 3rem; letter-spacing: 5px; margin-bottom: 10px; }
+        p { color: #aaa; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">∞</div>
+        <h1>TEAM INFINITY</h1>
+    </header>
+
+    <section class="content">
+        <h2>The Infinite Solar System</h2>
+        <p>Exploring the cosmos with no boundaries.</p>
+    </section>
+
+    <div class="solar-system">
+        <div class="sun"></div>
+
+        <div class="orbit earth-orbit">
+            <div class="planet earth"></div>
+        </div>
+
+        <div class="orbit mars-orbit">
+            <div class="planet mars"></div>
+        </div>
+        
+        </div>
+
+    
+
+[Image of the solar system with planets orbiting the sun]
+
+
+    <footer style="text-align: center; padding: 20px; color: #444;">
+        &copy; 2026 Team Infinity - To the stars and beyond.
+    </footer>
+
+</body>
+</html>
